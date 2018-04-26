@@ -1,1 +1,1 @@
-# mip-cli
+# Command Line Interface for MIP 2.0

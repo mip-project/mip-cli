@@ -1,0 +1,34 @@
+{
+  "name": "mip2",
+  "version": "0.0.1",
+  "description": "CLI for mip 2.0",
+  "preferGlobal": true,
+  "bin": {
+    "mip2": "bin/mip"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mip-project/mip-cli.git"
+  },
+  "keywords": [
+    "mip",
+    "2.0"
+  ],
+  "contributors": [
+    {
+      "name": "tracy",
+      "email": "qiushidev@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mip-project/mip-cli/issues"
+  },
+  "homepage": "https://github.com/mip-project/mip-cli#readme",
+  "dependencies": {
+    "commander": "^2.15.1"
+  }
+}
