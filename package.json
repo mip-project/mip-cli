@@ -4,7 +4,7 @@
   "description": "CLI for mip 2.0",
   "preferGlobal": true,
   "bin": {
-    "mip2": "bin/mip"
+    "mip2": "bin/mip2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,6 +29,19 @@
   },
   "homepage": "https://github.com/mip-project/mip-cli#readme",
   "dependencies": {
-    "commander": "^2.15.1"
+    "async": "^2.6.0",
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "download-git-repo": "^1.0.2",
+    "etpl": "^3.2.0",
+    "inquirer": "^5.2.0",
+    "metalsmith": "^2.3.0",
+    "ora": "^2.1.0",
+    "rimraf": "^2.6.2",
+    "semver": "^5.5.0",
+    "user-home": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
