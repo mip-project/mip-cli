@@ -6,17 +6,13 @@ const args = cli.setup({
     noArgs: true,
     usage: '[project-name]',
     help: [
-          '初始化 MIP 项目',
-          '    $ mip2 init',
-      ].join('\n')
+        '',
+        '  初始化 MIP 项目',
+        '    $ mip2 init [project-name]',
+    ].join('\n')
 });
 
-let rawName = args[0];
-
-// 检查模板更新后启动命令
-// require('../lib/update').exec().then(() => {
-    require('../lib/init').exec({
-        force: cli.program.force,
-        rawName
-    });
-// });
+require('../lib/init').exec({
+    force: cli.program.force,
+    rawName: args[0]
+});
