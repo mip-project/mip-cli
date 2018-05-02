@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 const cli = require('../lib/cli');
+const checkVersion = require('../lib/check-version');
+const init = require('../lib/init');
 
 const args = cli.setup({
     noArgs: true,
@@ -12,7 +14,8 @@ const args = cli.setup({
     ].join('\n')
 });
 
-require('../lib/init').exec({
-    force: cli.program.force,
-    rawName: args[0]
+checkVersion().then(() => {
+    init({
+        rawName: args[0]
+    });
 });
