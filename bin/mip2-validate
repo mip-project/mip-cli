@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const cli = require('../lib/cli');
+const validate = require('../lib/validate');
+
+const args = cli.setup({
+    noArgs: true,
+    help: [
+        '',
+        '  校验 MIP 组件',
+        '    $ mip2 publish',
+    ].join('\n')
+});
+
+
+validate();

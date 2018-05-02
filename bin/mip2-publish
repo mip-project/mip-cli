@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const cli = require('../lib/cli');
+const publish = require('../lib/publish');
+
+const args = cli.setup({
+    noArgs: true,
+    help: [
+        '',
+        '  发布 MIP 组件',
+        '    $ mip2 publish',
+    ].join('\n')
+});
+
+
+publish();
