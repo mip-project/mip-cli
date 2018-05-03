@@ -42,6 +42,7 @@
     "glob": "^7.1.2",
     "inquirer": "^5.2.0",
     "koa": "^2.5.1",
+    "koa-router": "^7.4.0",
     "metalsmith": "^2.3.0",
     "ora": "^2.1.0",
     "request": "^2.85.0",
