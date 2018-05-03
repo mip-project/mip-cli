@@ -2,15 +2,25 @@
 
 const cli = require('../lib/cli');
 const publish = require('../lib/publish');
+const validate = require('../lib/validate');
 
 const args = cli.setup({
     noArgs: true,
+    options: [
+        ['-k, --key <your-app-key>', 'app key']
+    ],
     help: [
         '',
         '  发布 MIP 组件',
-        '    $ mip2 publish',
+        '    $ mip2 publish -k <your-app-key>',
     ].join('\n')
 });
 
+validate().then(() => {
+    publish({
+        appkey: cli.program.key
+    });
+}, err => {
+    cli.error('组件校验失败: ' + err.message.trim());
+});
 
-publish();

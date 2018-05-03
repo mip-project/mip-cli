@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/mip-project/mip-cli#readme",
   "dependencies": {
+    "archiver": "^2.1.1",
     "async": "^2.6.0",
     "chalk": "^2.4.1",
     "commander": "^2.15.1",
