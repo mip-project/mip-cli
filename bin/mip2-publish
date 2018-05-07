@@ -16,6 +16,11 @@ const args = cli.setup({
     ].join('\n')
 });
 
+if (!cli.program.key) {
+    cli.warn('请输入 app key，形如：$ mip2 publish -k <your-app-key>');
+    return;
+}
+
 validate().then(() => {
     publish({
         appkey: cli.program.key
