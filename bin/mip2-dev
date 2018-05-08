@@ -3,6 +3,8 @@
 const cli = require('../lib/cli');
 const dev = require('../lib/dev');
 const path = require('path');
+const fs = require('fs');
+const merge = require('deepmerge');
 
 const args = cli.setup({
     noArgs: true,
@@ -12,9 +14,16 @@ const args = cli.setup({
         ['-l, --livereload', '启用调试自动刷新']
     ],
     help: [
-          '启动MIP调试服务器',
-          '    $ mip dev',
-      ].join('\n')
+        '启动MIP调试服务器',
+        '    $ mip dev',
+    ].join('\n')
 });
 
-dev(cli.program);
+const configPath = path.join(process.cwd(), 'mip.config.js');
+let defaultConfig = {};
+
+if (fs.existsSync(configPath)) {
+    defaultConfig = require(configPath);
+}
+
+dev(merge(defaultConfig, cli.program));
