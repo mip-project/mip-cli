@@ -1,4 +1,4 @@
-# mip2 CLI [![npm package](https://img.shields.io/npm/v/mip2.svg)](https://www.npmjs.com/package/mip2)
+# mip2 CLI [![npm package](https://img.shields.io/npm/v/mip2.svg)](https://www.npmjs.com/package/mip2) ![node](https://img.shields.io/node/v/mip2.svg)
 
 
 Command Line Interface for MIP 2.0.
