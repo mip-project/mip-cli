@@ -4,13 +4,15 @@ const cli = require('../lib/cli');
 const validate = require('../lib/validate');
 
 const args = cli.setup({
-    noArgs: true,
+    usage: '<component-name>',
     help: [
         '',
-        '  校验 MIP 组件',
-        '    $ mip2 publish',
+        '  Examples:',
+        cli.chalk.gray('    # 检查一个 mip 组件，输入组件目录'),
+        '    $ mip2 validate ./mip-demo'
     ].join('\n')
 });
 
-
-validate();
+validate({
+    filePath: args[0]
+});
