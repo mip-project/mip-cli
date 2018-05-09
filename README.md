@@ -38,6 +38,18 @@ Example:
 $ mip2 dev --port 8888
 ```
 
+组件校验
+
+``` bash
+$ mip2 validate
+```
+
+Example:
+
+``` bash
+$ mip2 validate components
+```
+
 构建组件，在项目根目录运行
 
 ``` bash
