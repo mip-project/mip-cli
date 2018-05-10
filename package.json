@@ -7,7 +7,7 @@
     "mip2": "bin/mip2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava --verbose"
   },
   "repository": {
     "type": "git",
@@ -76,5 +76,19 @@
   },
   "engines": {
     "node": ">=8"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js",
+      "!test/mock/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "require": [
+      "babel-register"
+    ]
   }
 }
