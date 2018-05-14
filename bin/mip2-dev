@@ -4,7 +4,6 @@ const cli = require('../lib/cli');
 const dev = require('../lib/dev');
 const path = require('path');
 const fs = require('fs');
-const merge = require('deepmerge');
 
 const args = cli.setup({
     noArgs: true,
@@ -26,4 +25,4 @@ if (fs.existsSync(configPath)) {
     defaultConfig = require(configPath);
 }
 
-dev(merge(defaultConfig, cli.program));
+dev(Object.assign(defaultConfig, cli.program));
