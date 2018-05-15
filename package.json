@@ -7,7 +7,7 @@
     "mip2": "bin/mip2"
   },
   "scripts": {
-    "test": "ava --verbose"
+    "test": "NODE_ENV=test && nyc ava --verbose"
   },
   "repository": {
     "type": "git",
@@ -78,7 +78,9 @@
     "node": ">=8"
   },
   "devDependencies": {
-    "ava": "^0.25.0"
+    "ava": "^0.25.0",
+    "execa": "^0.10.0",
+    "nyc": "^11.7.3"
   },
   "ava": {
     "files": [
