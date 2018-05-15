@@ -93,6 +93,9 @@ test('it should start dev server correctly', async t => {
             if (!err && res.statusCode === 200) {
                 resolve(res.body);
             }
+            else {
+                reject(err);
+            }
         });
     });
 
