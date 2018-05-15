@@ -1,13 +1,13 @@
 {
   "name": "mip2",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CLI for mip 2.0",
   "preferGlobal": true,
   "bin": {
     "mip2": "bin/mip2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test && nyc ava --verbose"
   },
   "repository": {
     "type": "git",
@@ -57,6 +57,7 @@
     "livereload": "^0.7.0",
     "metalsmith": "^2.3.0",
     "mip-component-validator": "^1.0.2",
+    "mip-validator": "^1.5.15",
     "opn": "^5.3.0",
     "ora": "^2.1.0",
     "postcss-loader": "^2.1.5",
@@ -74,5 +75,21 @@
   },
   "engines": {
     "node": ">=8"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "execa": "^0.10.0",
+    "nyc": "^11.7.3"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js",
+      "!test/mock/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "require": [
+      "babel-register"
+    ]
   }
 }
