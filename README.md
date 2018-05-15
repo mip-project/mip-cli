@@ -38,7 +38,7 @@ Example:
 $ mip2 dev --port 8888
 ```
 
-组件校验
+组件和页面校验
 
 ``` bash
 $ mip2 validate
@@ -47,7 +47,12 @@ $ mip2 validate
 Example:
 
 ``` bash
+# 组件校验
 $ mip2 validate components
+$ mip2 validate -c components
+
+# 页面校验
+$ mip2 validate -p page.html
 ```
 
 构建组件，在项目根目录运行
