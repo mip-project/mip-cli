@@ -29,7 +29,7 @@ $ mip2 dev
 `mip2 dev` 可以传入以下参数去修改默认配置：
 
 1. `-p --port`: 静态服务器的监听的端口号，默认为 8111；
-2. `-d --dir`: 组件文件夹路径，默认为 `process.cwd()/components`；
+2. `-d --dir`: 项目根目录，默认为 `process.cwd()`；
 3. `-l --livereload`: 是否启动自动刷新，默认为 false；
 4. `-a --auto`: 静态服务器启动后默认打开的网页，默认为空，即不打开任何页面；
 5. `-c --config`: 读取 mip-cli 配置文件，默认为 `process.cwd()/mip.config.js`;
