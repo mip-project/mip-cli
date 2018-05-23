@@ -25,7 +25,7 @@ $ mip2 init myProject
 
 使用编辑器打开 `test/index.html`，生成的模板已经为我们写好了 MIP 页面所需的最基本元素，如 `mip.js` 运行时，默认样式 `mip.css` 等。下面我们在页面中写入简单的内容，并使用内置 `mip-img` 组件。注意，如果使用其他非内置组件，需要在页面底部使用 `script` 标签引入相应的脚本文件。
 
-```
+```html
 <!DOCTYPE html>
 <html mip>
 <head>
@@ -77,7 +77,7 @@ $ mip2 dev
 
 ### 2. 新建一个自定义组件
 
-在 `myProject/components/` 目录下，仿照 `mip-example` 的结构，我们新增一个 `mip-hello-world` 目录，结构如下：
+在 `myProject/components/` 目录下，仿照 `mip-example` 的结构，我们创建一个 `mip-hello-world` 组件，结构如下：
 
 ```
 ── mip-hello-world
@@ -89,7 +89,7 @@ $ mip2 dev
 
 编辑器打开 `mip-hello-world.vue`，进行一定的修改
 
-```
+```html
 <template>
     <div class="wrapper">
         <h1>MIP 2.0 component example</h1>
@@ -119,7 +119,7 @@ $ mip2 dev
 
 编辑器打开 `test/index.html`, 修改 `body` 部分的代码，引用组件脚本
 
-```
+```html
 ...
 <body>
     <div class="wrapper">
