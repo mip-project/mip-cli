@@ -142,5 +142,5 @@ mip2 dev
 
 此时会自动打开 `http://127.0.0.1:8222/test/index.html`，页面显示如下：
 
-![mip-example.jpg](./assets/mip-example.jpg)
+![mip-example.jpg](https://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/assets/mip/docs/mip-example-a6d1f6f5.jpg)
 
