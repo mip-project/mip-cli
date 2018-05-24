@@ -49,7 +49,8 @@ test.cb('it should generate template correctly', t => {
         }
 
         // 文件是否生成
-        t.is(exists(`${TEMPLATE_OUTPUT_PATH}/components/mip-example.vue`), true);
+        t.is(exists(`${TEMPLATE_OUTPUT_PATH}/components/mip-example/mip-example.vue`), true);
+        t.is(exists(`${TEMPLATE_OUTPUT_PATH}/components/mip-example/mip-example.md`), true);
         t.is(exists(`${TEMPLATE_OUTPUT_PATH}/package.json`), true);
 
         // render 结果是否一致
@@ -87,7 +88,7 @@ test('it should start dev server correctly', async t => {
 
     let res = await new Promise((resolve, reject) => {
         request({
-            url: 'http://127.0.0.1:8111',
+            url: 'http://127.0.0.1:8111/test',
             timeout: 1000
         }, (err, res, body) => {
             if (!err && res.statusCode === 200) {
