@@ -6,16 +6,13 @@ const init = require('../lib/init');
 
 const args = cli.setup({
     noArgs: true,
-    usage: '[project-name]',
     help: [
         '',
         '  初始化 MIP 项目',
-        '    $ mip2 init [project-name]',
+        '    $ mip2 init',
     ].join('\n')
 });
 
 checkVersion().then(() => {
-    init({
-        rawName: args[0]
-    });
+    init();
 });
