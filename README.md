@@ -16,13 +16,7 @@ $ npm install -g mip2
 创建项目
 
 ``` bash
-$ mip2 init [project-name]
-```
-
-Example:
-
-``` bash
-$ mip2 init my-extensions
+$ mip2 init
 ```
 
 启动调试服务器，在项目根目录运行
